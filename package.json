@@ -25,6 +25,11 @@
   },
   "author": "Faraway",
   "license": "MIT",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danselmorgan120/humbleshire.git"
+  },
 
   "engines": {
     "node": "12.16.1",
