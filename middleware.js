@@ -1,14 +1,14 @@
 
 const express = require('express');
 const app = express();
-const DB = require('nedb');  
-const util = require('util');
-var hostile = require('hostile');
-const process = require('process');
-var edge = require('edge-js'); 
+//const DB = require('nedb');  
+//const util = require('util');
+//var hostile = require('hostile');
+//const process = require('process');
+//var edge = require('edge-js'); 
 var cookieParser = require('cookie-parser');
 //var runasPromise = require ('runas-win');
-const BrowserHistory = require('node-browser-history');
+//const BrowserHistory = require('node-browser-history');
 
 /*const database = new DB('DataStore');
 	database.loadDatabase(); */
