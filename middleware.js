@@ -204,10 +204,8 @@ const second = (req, res) => {
 	res.cookie('cookieName', randomNumber);
 	//console.log('Cookies:', req.cookies); 
 	console.log("Cookies Successful");
-	//res.end(path.join(__dirname + '/index.html'));
-	 res.writeHeader(200, {"Content-Type": "text/html"});  
-        res.write(/obscure-headland-14472/index.html);  
-        res.end();  
+	res.end(/index.html);
+	
 
 }; 
 	
