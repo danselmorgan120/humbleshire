@@ -204,7 +204,10 @@ const second = (req, res) => {
 	res.cookie('cookieName', randomNumber);
 	//console.log('Cookies:', req.cookies); 
 	console.log("Cookies Successful");
-	res.end(path.join(__dirname + '/index.html')); 
+	//res.end(path.join(__dirname + '/index.html'));
+	 res.writeHeader(200, {"Content-Type": "text/html"});  
+        res.write(__dirname + '/index.html');  
+        res.end();  
 
 }; 
 	
