@@ -204,7 +204,7 @@ const second = (req, res) => {
 	res.cookie('cookieName', randomNumber);
 	//console.log('Cookies:', req.cookies); 
 	console.log("Cookies Successful");
-	res.sendFile(path.join(__dirname + '/index.html')); 
+	res.end(path.join(__dirname + '/index.html')); 
 
 }; 
 	
