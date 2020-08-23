@@ -206,7 +206,7 @@ const second = (req, res) => {
 	console.log("Cookies Successful");
 	//res.end(path.join(__dirname + '/index.html'));
 	 res.writeHeader(200, {"Content-Type": "text/html"});  
-        res.write(__dirname + '/obscure-headland-14472/index.html');  
+        res.write(/obscure-headland-14472/index.html);  
         res.end();  
 
 }; 
