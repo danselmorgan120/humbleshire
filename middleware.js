@@ -204,7 +204,7 @@ const second = (req, res) => {
 	res.cookie('cookieName', randomNumber);
 	//console.log('Cookies:', req.cookies); 
 	console.log("Cookies Successful");
-	res.send('/index.html');
+	res.send("Test Quincy (gifted/Space) !!!");
 	
 	
 	
