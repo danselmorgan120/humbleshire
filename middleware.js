@@ -204,7 +204,8 @@ const second = (req, res) => {
 	res.cookie('cookieName', randomNumber);
 	//console.log('Cookies:', req.cookies); 
 	console.log("Cookies Successful");
-	res.sendFile(path.join(__dirname + '/app/index.html')); 
+	//res.sendFile(path.join(__dirname + '/app/index.html')); 
+	res.sendFile('app/index.html', {root: path.dirname(__dirname)});
 	//res.send('<p2>Test Quincy (Gifted/Space) !!!<p2>');
 	//res.write('<html>');
         //res.write('<head> <title> Hello TutorialsPoint </title> </head>');
