@@ -204,11 +204,12 @@ const second = (req, res) => {
 	res.cookie('cookieName', randomNumber);
 	//console.log('Cookies:', req.cookies); 
 	console.log("Cookies Successful");
+	res.sendFile(path.join(__dirname + '/app/index.html')); 
 	//res.send('<p2>Test Quincy (Gifted/Space) !!!<p2>');
-	res.write('<html>');
-        res.write('<head> <title> Hello TutorialsPoint </title> </head>');
-        res.write(' <body> Hello Tutorials Point </body>');
-        res.write('</html>');
+	//res.write('<html>');
+        //res.write('<head> <title> Hello TutorialsPoint </title> </head>');
+        //res.write(' <body> Hello Tutorials Point </body>');
+        //res.write('</html>');
 	res.end();
 	
 	
