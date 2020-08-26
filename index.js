@@ -5,6 +5,8 @@ var cors = require("cors");
 const app = express();
 var port = process.env.PORT || 5060; 
 
+app.use(express.static('Public'));
+
 const { first, second } = require("./middleware");
  
 app.use(first, second);
