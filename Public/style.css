@@ -52,6 +52,16 @@
   color: #0000FF;
   text-decoration: none;
 }
+.box{
+    width: 300px ; 
+    height: 126px;
+    padding: 10px
+    margin: 50px auto;
+    border: 5px white; 
+
+    background-image: url(paypal-logo.jpg);
+    background-size: cover;  
+}    
 .form .register-form {
   display: none;
 }
